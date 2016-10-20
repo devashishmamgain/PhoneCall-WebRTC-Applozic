@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/messageLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:gravity="right"
+    android:longClickable="true"
+    android:padding="4dp"
+    android:orientation="horizontal">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/messageTextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="95dp"
+        android:padding="5dp"
+        android:minWidth="60dp"
+        android:background="@drawable/applozic_sent_message"
+        android:gravity="right|center_vertical"
+        android:minHeight="35dp"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/messageTextInsideLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/attached_file"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/applozic_ic_action_attachment"
+                android:drawablePadding="8dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <include layout="@layout/mobicom_attachment_preview_layout" />
+
+            <include layout="@layout/mobicom_contact_share_layout" />
+
+            <include layout="@layout/mobicom_chat_location_view" />
+
+            <ImageView
+                android:id="@+id/sentOrReceivedIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <com.rockerhieu.emojicon.EmojiconTextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:text=""
+                android:textColor="@color/sent_message_text_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/selfDestruct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="8dp"
+            android:text="Self destruct"
+            android:textColor="@color/message_details_text_color"
+            android:textSize="11dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/messageTextLayout"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingRight="4dp">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="0dp"
+            android:paddingRight="2dp"
+            android:text=""
+            android:textColor="@color/message_details_text_color"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/createdAtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:text="created at time"
+            android:textColor="@color/message_details_text_color"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <!--
+    <ImageView
+        android:id="@+id/contactImage"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="4dp"
+        android:visibility="gone"
+        android:src="@drawable/applozic_ic_contact_picture_180_holo_light" />
+    -->
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <style name="DemoAppTheme" parent="AppBaseTheme"></style>
+
+    <style name="EditText">
+        <item name="android:gravity">left</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:textColor">@color/textbuttoncolor</item>
+        <item name="android:background">@color/buttonbgcolor</item>
+    </style>
+
+</resources>

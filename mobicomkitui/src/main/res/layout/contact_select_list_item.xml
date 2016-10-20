@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Use standard android.R class icon id instead of app specific id. This is just useful for
+         consistency. Use scaleType=centerCrop to give a nice full cropped image in the assigned
+         space -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/contactImage"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:src="@drawable/applozic_ic_contact_picture_180_holo_light"
+        android:visibility="visible" />
+
+    <!-- Use standard android.R class text2 id instead of app specific id. This is just useful for
+         consistency. This is secondary text and not always visible so by default is has its
+         visibility set to gone -->
+    <TextView
+        android:id="@+id/applozic_group_member_info"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/contactImage"
+        android:ellipsize="marquee"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="@dimen/listview_item_padding"
+        android:paddingRight="@dimen/listview_item_padding"
+        android:visibility="gone"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+    <!-- Use standard android.R class text1 id instead of app specific id. This is just useful for
+         consistency. This view also sets layout_alignWithParentIfMissing=true which lets the view
+         align with the parent view if the text2 view is not part of the view hierarchy (which is
+         its initial state). -->
+    <TextView
+        android:id="@+id/displayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toRightOf="@id/contactImage"
+        android:ellipsize="marquee"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/listview_item_padding"
+        android:paddingRight="@dimen/listview_item_padding"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:id="@+id/checkbox"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/displayName"
+        android:layout_alignRight="@+id/displayName"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        app:buttonTint="#b2b2b2" />
+
+</RelativeLayout>

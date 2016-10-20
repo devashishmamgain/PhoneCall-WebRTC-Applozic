@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:applozic="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/start_new"
+        android:icon="@drawable/applozic_ic_action_add"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="Start New"
+        applozic:showAsAction="ifRoom|collapseActionView" />
+
+
+    <item
+        android:id="@+id/notification"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="Notifications"
+        applozic:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/group"
+        android:icon="@drawable/applozic_ic_action_chat"
+        android:orderInCategory="2"
+        android:showAsAction="collapseActionView"
+        android:title="New Group"
+        applozic:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/broad_cast_group"
+        android:icon="@drawable/applozic_ic_action_chat"
+        android:orderInCategory="3"
+        android:showAsAction="collapseActionView"
+        android:title="New Broadcast"
+        applozic:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/applozic_ic_action_time"
+        android:orderInCategory="4"
+        android:showAsAction="collapseActionView"
+        android:title="Refresh"
+        applozic:showAsAction="collapseActionView" />
+
+</menu>

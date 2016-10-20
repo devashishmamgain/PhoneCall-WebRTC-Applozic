@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/whitesmoke"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/applozic_red_color"
+        android:id="@+id/notification_user_detail_rl">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Video Call from"
+            android:id="@+id/notification_user_name"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/notification_profile_image"
+        android:src="@drawable/applozic_ic_contact_picture_180_holo_light"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/notification_user_detail_rl"
+        android:layout_marginBottom="52dp">
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp"
+        android:background="@color/applozic_red_color"
+        >
+
+        <ImageButton
+            android:id="@+id/alarmlistitem_rejectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/circular_white_dot"
+            android:src="@drawable/ic_reject_call_end"
+            />
+
+        <ImageButton
+            android:id="@+id/alarmlistitem_acceptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circular_white_dot"
+            android:layout_alignTop="@+id/alarmlistitem_rejectButton"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_ring_volume"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

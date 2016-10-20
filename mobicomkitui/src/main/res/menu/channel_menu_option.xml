@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobitexter="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/edit_channel_name"
+        android:orderInCategory="1"
+        android:icon="@drawable/applozic_ic_mode_edit_white"
+        android:showAsAction="ifRoom"
+        android:title="Edit group name"
+        mobitexter:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/add_member_to_channel"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom"
+        mobitexter:showAsAction="ifRoom"
+        android:icon="@drawable/applozic_ic_person_add_white"
+        android:title="Add member" />
+    </menu>

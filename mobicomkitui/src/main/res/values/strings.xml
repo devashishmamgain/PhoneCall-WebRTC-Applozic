@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="internet_connection_not_available">No internet connection</string>
+    <string name="you_need_network_access_for_delete">You need to have network access for deleting Conversation </string>
+    <string name="you_need_network_access_for_block_or_unblock">You need to have network access for block/unblock a user</string>
+    <string name="applozic_server_error">Oops! You caught an error, try again later</string>
+    <string name="internet_connection_for_group_name_info">Your phone needs an Internet connection to change the group name</string>
+    <string name="you_dont_have_any_network_access_info">You don\'t have any network access now</string>
+    <string name="failed_to_leave_group">Failed to leave group</string>
+    <string name="user_is_already_exists">User already exists in group</string>
+    <string name="delete_conversation_failed">Delete failed</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_add_contact">Create a new contact</string>
+    <string name="menu_edit_contact">Edit Contact</string>
+    <string name="no_contacts">No Contacts Found</string>
+    <string name="no_contact_selected">No Contact Selected</string>
+    <string name="search_hint">Search...</string>
+    <string name="activity_contacts_list">MobiTexter</string>
+    <string name="activity_contacts_title">Select contact</string>
+    <string name="activity_contact_detail">Contact Detail</string>
+    <string name="contacts_list_search_results_title">Contact search for \"%s\"</string>
+    <string name="contactsListActivity">Contact List</string>
+    <string name="phone_number_not_present">Phone number is not present</string>
+    <string name="mobiframework_title_device">Device</string>
+    <string name="mobiframework_title_group">Group</string>
+    <string name="zero_friends_on_phone">No matching contact found on phone contacts but you can still send message by entering the email, userId or phone number</string>
+    <string name="contact_sync_in_progress">Contact sync is in progress, might take few mins</string>
+    <string name="zero_friends_on_app">Contacts not found</string>
+    <string name="zero_groups_on_app">Groups not found</string>
+    <string name="delete_thread_text">Deleting....</string>
+    <string name="search_title">Search</string>
+    <string name ="applozic_user_already_in_a_group">Already added to the [groupType]</string>
+    <string name ="applozic_contacts_loading_info">Loading please wait...</string>
+    <string name ="applozic_contacts_loading_error">You need to have network access for loading contacts</string>
+
+
+    <!--
+         Used for the AlphabetIndexer in ContactsListFragment to provide quick navigation by
+         alphabet using ListView fast scroll.
+    -->
+    <string name="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <!--
+         When using ContactsContract.Contacts#CONTENT_FILTER_URI to search contacts, a match occurs
+         when using a number of different fields, such as name, e-mail address, address, phone
+         number, etc. When a match occurs that is not the name, there is currently no way to tell
+         which other field was matched. This string is displayed in the secondary display text in
+         ContactsListFragment when a search query match occurs that is not the display name.
+    -->
+    <string name="search_match_other">Matches Other Field</string>
+    <string name="invite">Invite your friends</string>
+    <array name="alphabet_color">
+        <item>#f16364</item>
+        <item>#f58559</item>
+        <item>#f9a43e</item>
+        <item>#e4c62e</item>
+        <item>#67bf74</item>
+        <item>#59a2be</item>
+        <item>#2093cd</item>
+        <item>#ad62a7</item>
+    </array>
+    <dimen name="tile_letter_font_size">250dp</dimen>
+    <!-- The deafult tile size -->
+    <dimen name="letter_tile_size">64dp</dimen>
+
+    <string name="contact_permission">Contact permission are needed to access</string>
+    <string name="storage_permission">Storage permission are needed to access</string>
+    <string name="read_sms_permission">Read sms permission are needed to access</string>
+    <string name="location_permission">Location permission are needed to access</string>
+    <string name="phone_state_permisssion">Phone state permission are needed to access</string>
+    <string name="phone_call_permission">Phone call permission are needed to access</string>
+    <string name="phone_camera_permission">Camera permission are needed to access</string>
+    <string name="record_audio">Audio recording permission needed</string>
+
+
+    <string name="contact_permission_not_granted">Permission were not granted for Contact</string>
+    <string name="storage_permission_not_granted">Permissions were not granted for Storage</string>
+    <string name="read_sms_permission_not_granted">Permissions were not granted for Read</string>
+    <string name="location_permission_not_granted">Permissions were not granted for Location</string>
+    <string name="phone_state_permission_not_granted">Permissions were not granted for Phone state</string>
+    <string name="phone_call_permission_not_granted">Permission were not granted for Phone call</string>
+    <string name="phone_camera_permission_not_granted">Permission were not granted for Camera</string>
+    <string name="record_audio_permission_not_granted">Permissions were not granted for Audio recording</string>
+
+
+    <string name="contact_permission_granted">Contacts Permission have been granted</string>
+    <string name="storage_permission_granted">Storage Permissions have been granted</string>
+    <string name="read_sms_permission_granted">Read sms Permissions have been granted</string>
+    <string name="location_permission_granted">Location Permissions has been granted</string>
+    <string name="phone_state_permission_granted">Phone state Permissions has been granted</string>
+    <string name="phone_call_permission_granted">Phone call Permission has been granted</string>
+    <string name="phone_camera_permission_granted">Camera permission has been granted</string>
+    <string name="record_audio_permission_granted">Audio Record permissions has been granted</string>
+    <string name="mobicom_max_attachment_warning">Max attachment limit reached</string>
+    <string name="mobicom_select_attachment_text">Select at least one attachment</string>
+    <string name="audio_recording_send_text">Tap on Start to record audio</string>
+    <string name="applozic_audio_permission_missing">Unable to launch audio recorder.</string>
+    <string name="applozic_message_info">Message Info</string>
+    <string name="applozic_message_info_no_network">Not able to fetch message info.</string>
+    <string name="invite_whatsapp_contacts">INVITE WHATSAPP CONTACTS</string>
+    <string name="applozic_user_profile_heading">Profile</string>
+
+</resources>

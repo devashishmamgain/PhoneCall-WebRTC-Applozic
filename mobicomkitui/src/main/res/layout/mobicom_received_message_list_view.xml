@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/messageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:longClickable="true"
+    android:layout_marginTop="2dp"
+    android:padding="3dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_margin="4dp"
+        android:text=""
+        android:id="@+id/alphabeticImage"
+        android:background="@drawable/mobiframework_circular_text_view"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginRight="4dp"
+        android:visibility="gone" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/contactImage"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_margin="4dp"
+        android:visibility="visible"
+        android:layout_toRightOf="@+id/alphabeticImage"
+        android:src="@drawable/applozic_ic_contact_picture_180_holo_light" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/messageTextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:minWidth="60dp"
+        android:layout_toRightOf="@+id/contactImage"
+        android:layout_marginRight="59dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/applozic_received_message"
+        android:minHeight="35dp">
+
+        <TextView
+            android:id="@+id/name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="5dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:visibility="gone"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/messageTextInsideLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/attached_file"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/applozic_ic_action_attachment"
+                android:drawablePadding="8dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <include
+                layout="@layout/mobicom_attachment_preview_layout" />
+
+            <include
+                layout="@layout/mobicom_contact_share_layout" />
+
+            <include layout="@layout/mobicom_chat_location_view" />
+
+            <ImageView
+                android:id="@+id/sentOrReceivedIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <com.rockerhieu.emojicon.EmojiconTextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="3dp"
+                android:text=""
+                android:textColor="@color/message_text_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/selfDestruct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="2dp"
+            android:text="Self destruct"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageTextLayout"
+        android:layout_marginLeft="44dp"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:gravity="bottom"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="0dp"
+            android:paddingRight="2dp"
+            android:text=""
+            android:textColor="@color/message_details_text_color"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/createdAtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="2dp"
+            android:text="created at time"
+            android:textColor="@color/message_details_text_color"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tempForLayoutAdjustment"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/applozic_ic_action_message_pending"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

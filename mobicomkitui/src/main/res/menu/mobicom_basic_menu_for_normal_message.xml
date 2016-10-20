@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobitexter="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/conversations"
+        android:icon="@drawable/applozic_ic_action_chat"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+        android:visible="false"
+        android:title="Conversations"
+        mobitexter:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/start_new"
+        android:icon="@drawable/applozic_ic_action_add"
+        android:orderInCategory="2"
+        android:visible="false"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="Start New"
+        mobitexter:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/video_call"
+        android:orderInCategory="3"
+        android:visible="false"
+        android:icon="@drawable/ic_videocam_white_24px"
+        android:padding="8dp"
+        mobitexter:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/video_call" />
+
+    <item
+        android:id="@+id/dial"
+        android:icon="@drawable/applozic_ic_action_call"
+        android:orderInCategory="3"
+        android:visible="false"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="Dial"
+        mobitexter:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/applozic_ic_action_time"
+        android:orderInCategory="4"
+        android:visible="false"
+        android:showAsAction="collapseActionView"
+        android:title="Refresh"
+        mobitexter:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/deleteConversation"
+        android:icon="@drawable/applozic_ic_action_edit"
+        android:orderInCategory="5"
+        android:visible="false"
+        android:showAsAction="collapseActionView"
+        android:title="@string/delete_conversation"
+        mobitexter:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/shareOptions"
+        android:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+        android:icon="@drawable/mobicom_social_share"
+        android:orderInCategory="10"
+        android:showAsAction="collapseActionView"
+        android:title="@string/shareOptions"
+        android:visible="false"
+        mobitexter:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/userBlock"
+        android:showAsAction="collapseActionView"
+        android:title="@string/user_block"
+        android:orderInCategory="6"
+        android:visible="false"
+        mobitexter:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/userUnBlock"
+        android:showAsAction="collapseActionView"
+        android:title="@string/user_un_block"
+        android:visible="false"
+        android:orderInCategory="6"
+        mobitexter:showAsAction="collapseActionView" />
+
+
+</menu>

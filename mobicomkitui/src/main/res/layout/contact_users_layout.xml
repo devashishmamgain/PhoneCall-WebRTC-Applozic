@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="?android:attr/listPreferredItemHeight">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/profile_image_rlayout"
+        android:paddingLeft="@dimen/listview_item_padding"
+        android:paddingRight="0dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="6dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/alphabeticImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/mobiframework_circular_text_view"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contactImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/alphabeticImage"
+            android:src="@drawable/applozic_ic_contact_picture_holo_light"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/onlineTextView"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@+id/profile_image_rlayout"
+        android:layout_alignEnd="@+id/profile_image_rlayout"
+        android:layout_alignRight="@+id/profile_image_rlayout"
+        android:layout_gravity="left|top"
+        android:background="@drawable/online_circle"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/lastSeenAtTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/displayName"
+        android:layout_toRightOf="@id/profile_image_rlayout"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:paddingLeft="@dimen/listview_item_padding"
+        android:paddingRight="@dimen/listview_item_padding"
+        android:singleLine="true"
+        android:textColor="@color/applozic_receiver_name_text_color" />
+
+    <!-- Use standard android.R class text1 id instead of app specific id. This is just useful for
+         consistency. This view also sets layout_alignWithParentIfMissing=true which lets the view
+         align with the parent view if the text2 view is not part of the view hierarchy (which is
+         its initial state). -->
+    <TextView
+        android:id="@+id/displayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toRightOf="@id/profile_image_rlayout"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/listview_item_padding"
+        android:paddingRight="@dimen/listview_item_padding"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/applozic_receiver_name_text_color"/>
+
+    <TextView
+        android:id="@+id/adminTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:text="@string/admin_text"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:padding="2dp"
+        android:textColor="@color/applozic_green_color"
+        android:layout_alignTop="@+id/displayName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

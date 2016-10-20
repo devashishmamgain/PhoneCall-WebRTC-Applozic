@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "799088024395",
+    "firebase_url": "https://phone-call-app.firebaseio.com",
+    "project_id": "phone-call-app",
+    "storage_bucket": "phone-call-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799088024395:android:03391677a40df84c",
+        "android_client_info": {
+          "package_name": "com.applozic.app.phonecall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799088024395-kqqgke3ieepjqs8c9bo9e7jfaah3597p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR3x4hsLoWUBLilEI6mYQ6BB92hBP1XXI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

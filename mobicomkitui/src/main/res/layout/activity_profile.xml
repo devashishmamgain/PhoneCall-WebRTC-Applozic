@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:titleTextAppearance="@color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/applozic_user_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/applozic_ic_contact_picture_180_holo_light" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:id="@+id/applozic_user_profile_camera"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_action_camera_new"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/applozic_user_profile"
+                    android:layout_alignEnd="@+id/applozic_user_profile" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/participantsCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingTop="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:clickable="true"
+                app:cardCornerRadius="0dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp"
+                >
+                <TextView  android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/applozic_heading_displayname"
+                    android:textSize="10sp"
+                    android:text="Display Name"/>
+                <EditText
+                    android:id="@+id/applozic_profile_display_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Display Name..."
+                    android:padding="15dp"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="6dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/applozic_heading_displayname"
+                    android:layout_alignParentBottom="true" />
+
+                <ImageButton
+                    android:id="@+id/applozic_profile_display_name_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:contentDescription="image"
+                    android:src="@drawable/applozic_ic_action_edit"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:background="@color/white"
+                app:cardCornerRadius="0dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                >
+                <TextView  android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/applozic_heading_phone_no"
+                    android:textSize="10sp"
+                    android:text="Phone No"/>
+                <EditText
+                    android:id="@+id/applozic_profile_phone_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Register Phone no"
+                    android:padding="15dp"
+                    android:layout_below="@+id/applozic_heading_phone_no"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="6dp"
+                    android:textSize="18sp"
+                    android:layout_alignParentBottom="true" />
+
+                <ImageButton
+                    android:id="@+id/applozic_profile_phone_no_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/applozic_profile_phone_no"
+                    android:layout_alignRight="@+id/applozic_profile_phone_no"
+                    android:layout_alignTop="@+id/applozic_profile_phone_no"
+                    android:layout_margin="8dp"
+                    android:visibility="gone"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:contentDescription="image"
+                    android:src="@drawable/applozic_ic_action_edit" />
+            </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:visibility="visible"
+                app:cardCornerRadius="0dp"
+                android:background="@color/white"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                >
+                <TextView  android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/applozic_heading_status"
+                    android:textSize="10sp"
+                    android:text="Status">
+
+                </TextView>
+                <EditText
+                    android:id="@+id/applozic_profile_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Enter your status"
+                    android:padding="15dp"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="6dp"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/applozic_heading_status"
+                    android:layout_alignParentBottom="true" />
+
+                <ImageButton
+                    android:id="@+id/applozic_profile_status_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/applozic_profile_status"
+                    android:layout_alignRight="@+id/applozic_profile_status"
+                    android:layout_alignTop="@+id/applozic_profile_status"
+                    android:layout_margin="8dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:contentDescription="image"
+                    android:src="@drawable/applozic_ic_action_edit" />
+            </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
