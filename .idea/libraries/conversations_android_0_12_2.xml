@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="conversations-android-0.12.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.twilio/conversations-android/0.12.2/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.twilio/conversations-android/0.12.2/jars/libs/libjingle_peerconnection_java.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.twilio/conversations-android/0.12.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
