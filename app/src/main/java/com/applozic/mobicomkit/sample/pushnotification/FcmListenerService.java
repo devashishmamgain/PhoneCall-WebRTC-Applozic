@@ -8,6 +8,8 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 
+
+
 public class FcmListenerService extends FirebaseMessagingService {
 
     private static final String TAG = "ApplozicGcmListener";
@@ -25,5 +27,4 @@ public class FcmListenerService extends FirebaseMessagingService {
             }
         }
     }
-
 }
