@@ -47,8 +47,7 @@ import com.applozic.mobicomkit.api.account.user.UserLoginTask;
 import com.applozic.mobicomkit.contact.AppContactService;
 import com.applozic.mobicomkit.sample.MainActivity;
 import com.applozic.mobicomkit.uiwidgets.ApplozicSetting;
-import com.applozic.mobicomkit.uiwidgets.conversation.ConversationUIService;
-import com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity;
+import com.applozic.mobicomkit.uiwidgets.people.activity.MobiComKitPeopleActivity;
 import com.applozic.mobicommons.commons.core.utils.PermissionsUtils;
 import com.applozic.mobicommons.commons.core.utils.Utils;
 import com.applozic.mobicommons.people.contact.Contact;
@@ -104,7 +103,7 @@ public class LoginActivity extends Activity implements ActivityCompat.OnRequestP
         populateAutoComplete();
 
         mPhoneNumberView = (EditText) findViewById(R.id.phoneNumber);
-        mUserIdView = (EditText) findViewById(R.id.userId);
+        mUserIdView = mEmailView;
         mPasswordView = (EditText) findViewById(R.id.password);
         mDisplayName = (EditText) findViewById(R.id.displayName);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -225,11 +224,6 @@ public class LoginActivity extends Activity implements ActivityCompat.OnRequestP
         boolean cancel = false;
         View focusView = null;
 
-        if (TextUtils.isEmpty(mUserIdView.getText().toString()) || mUserIdView.getText().toString().trim().length() == 0) {
-            mUserIdView.setError(getString(R.string.error_field_required));
-            focusView = mUserIdView;
-            cancel = true;
-        }
         // Check for a valid password, if the user entered one.
         if ((TextUtils.isEmpty(mPasswordView.getText().toString())||mPasswordView.getText().toString().trim().length() == 0) && !isPasswordValid(mPasswordView.getText().toString())) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
@@ -239,9 +233,9 @@ public class LoginActivity extends Activity implements ActivityCompat.OnRequestP
 
         // Check for a valid email address.
         if (TextUtils.isEmpty(email)) {
-            /*mEmailView.setError(getString(R.string.error_field_required));
+            mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
-            cancel = true;*/
+            cancel = true;
         } else if (!isEmailValid(email)) {
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
@@ -306,10 +300,7 @@ public class LoginActivity extends Activity implements ActivityCompat.OnRequestP
                     //starting main MainActivity
                     Intent mainActvity = new Intent(context, MainActivity.class);
                     startActivity(mainActvity);
-                    Intent intent = new Intent(context, ConversationActivity.class);
-                    if(ApplozicClient.getInstance(LoginActivity.this).isContextBasedChat()){
-                        intent.putExtra(ConversationUIService.CONTEXT_BASED_CHAT,true);
-                    }
+                    Intent intent = new Intent(context, MobiComKitPeopleActivity.class);
                     startActivity(intent);
                     finish();
                 }

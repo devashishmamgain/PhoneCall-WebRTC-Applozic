@@ -66,21 +66,6 @@
             android:layout_gravity="center"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/userId"
-                style="@style/EditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:background="#FFF"
-                android:hint="@string/prompt_user_id"
-                android:imeOptions="actionNext"
-                android:inputType="text"
-                android:maxLines="1"
-                android:padding="10dp"
-                android:password="false"
-                android:singleLine="true" />
 
             <AutoCompleteTextView
                 android:id="@+id/email"

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Applozic</string>
-    <string name="mobicomkit_label">Applozic</string>
+    <string name="mobicomkit_label">PhoneCall</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Chat using Fragment </string>
