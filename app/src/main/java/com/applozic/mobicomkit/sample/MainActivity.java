@@ -24,7 +24,6 @@ import android.widget.Toast;
 
 import com.applozic.app.phonecall.LoginActivity;
 import com.applozic.app.phonecall.R;
-import com.applozic.mobicomkit.ApplozicClient;
 import com.applozic.mobicomkit.api.account.user.MobiComUserPreference;
 import com.applozic.mobicomkit.api.account.user.UserLogoutTask;
 import com.applozic.mobicomkit.contact.AppContactService;
@@ -32,12 +31,13 @@ import com.applozic.mobicomkit.feed.TopicDetail;
 import com.applozic.mobicomkit.uiwidgets.async.ApplzoicConversationCreateTask;
 import com.applozic.mobicomkit.uiwidgets.conversation.ConversationUIService;
 import com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity;
+import com.applozic.mobicomkit.uiwidgets.people.activity.MobiComKitPeopleActivity;
 import com.applozic.mobicommons.people.channel.Conversation;
 import com.applozic.mobicommons.people.contact.Contact;
 
 
 public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks, EcommerceFragment.OnFragmentInteractionListener {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks{
     private UserLogoutTask userLogoutTask;
     public static final String TAKE_ORDER = "takeOrder";
     public static final String TAG = "MainActivity";
@@ -124,10 +124,13 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
 
         if (position == 1) {
-            Intent intent = new Intent(this, ConversationActivity.class);
+            /*Intent intent = new Intent(this, ConversationActivity.class);
             if(ApplozicClient.getInstance(this).isContextBasedChat()){
                 intent.putExtra(ConversationUIService.CONTEXT_BASED_CHAT,true);
             }
+            startActivity(intent);
+            return;*/
+            Intent intent = new Intent(this, MobiComKitPeopleActivity.class);
             startActivity(intent);
             return;
         }/*
@@ -141,12 +144,15 @@ public class MainActivity extends ActionBarActivity
 
         }*/
         if (position == 0) {
-            mTitle = getString(R.string.ecommerce);
+           /* mTitle = getString(R.string.ecommerce);
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.container, EcommerceFragment.newInstance("", ""))
-                    .commit();
+                    .commit();*/
+            Intent intent = new Intent(this, MobiComKitPeopleActivity.class);
+            startActivity(intent);
             return;
+
         }
 
         if (position == 2) {
@@ -306,7 +312,7 @@ public class MainActivity extends ActionBarActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
+    //@Override
     public void onFragmentInteraction(Uri uri) {
 
     }
