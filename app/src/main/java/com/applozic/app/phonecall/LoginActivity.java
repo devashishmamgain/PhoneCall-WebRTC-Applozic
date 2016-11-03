@@ -47,7 +47,6 @@ import com.applozic.mobicomkit.api.account.user.UserLoginTask;
 import com.applozic.mobicomkit.contact.AppContactService;
 import com.applozic.mobicomkit.sample.MainActivity;
 import com.applozic.mobicomkit.uiwidgets.ApplozicSetting;
-import com.applozic.mobicomkit.uiwidgets.people.activity.MobiComKitPeopleActivity;
 import com.applozic.mobicommons.commons.core.utils.PermissionsUtils;
 import com.applozic.mobicommons.commons.core.utils.Utils;
 import com.applozic.mobicommons.people.contact.Contact;
@@ -93,15 +92,12 @@ public class LoginActivity extends Activity implements ActivityCompat.OnRequestP
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //FacebookSdk.sdkInitialize(this);
-
         setContentView(R.layout.activity_login);
         setupUI(findViewById(R.id.layout));
         layout = (LinearLayout) findViewById(R.id.footerSnack);
-
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
-
         mPhoneNumberView = (EditText) findViewById(R.id.phoneNumber);
         mUserIdView = mEmailView;
         mPasswordView = (EditText) findViewById(R.id.password);
@@ -217,7 +213,7 @@ public class LoginActivity extends Activity implements ActivityCompat.OnRequestP
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
         String phoneNumber = mPhoneNumberView.getText().toString();
-        String userId = mUserIdView.getText().toString();
+        String userId = email;
         String password = mPasswordView.getText().toString();
         String displayName = mDisplayName.getText().toString();
 
@@ -300,8 +296,6 @@ public class LoginActivity extends Activity implements ActivityCompat.OnRequestP
                     //starting main MainActivity
                     Intent mainActvity = new Intent(context, MainActivity.class);
                     startActivity(mainActvity);
-                    Intent intent = new Intent(context, MobiComKitPeopleActivity.class);
-                    startActivity(intent);
                     finish();
                 }
 
